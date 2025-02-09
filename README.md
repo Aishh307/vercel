@@ -1,173 +1,409 @@
-<p align="center">
-  <a href="https://vercel.com">
-    <img src="https://assets.vercel.com/image/upload/v1588805858/repositories/vercel/logo.png" height="96">
-    <h3 align="center">Vercel</h3>
-  </a>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Day By SHOBHIT DEV</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="text">
+        <h2>Life is sweeter with chocolates, just like your smile! 🍫😊</h2>
+        <p>I have something special for you:</p>
+        <a href="new.html" class="btn">Click Here</a>
+    </div>
+</body>
+</html>
+@import url("https://fonts.google
+pis.com/css?family=Bitter:700&display=swap");
+*, *:before, *:after {
+  position: relative;
+  box-sizing: border-box;
+}
 
-<p align="center">
-  Develop. Preview. Ship.
-</p>
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
-<p align="center">
-  <a href="https://vercel.com/docs"><strong>Documentation</strong></a> ·
-  <a href="https://vercel.com/changelog"><strong>Changelog</strong></a> ·
-  <a href="https://vercel.com/templates"><strong>Templates</strong></a> ·
-  <a href="https://vercel.com/docs/cli"><strong>CLI</strong></a>
-</p>
-<br/>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F47321;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
 
-## Vercel
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #F47321;
+  font-family: 'Bitter', sans-serif;
+  text-align: center;
+}
+.chocolate-button {
+  border: none;
+  background: none;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.bar {
+  display: inline-block;
+  background: #754C28;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+.textfornext {
+  font-size: 22px;
+  color: rgb(255, 0, 0);
+  margin-top: 100px;
+}
+.textfornext a {
+  display: inline-block;
+  background: #553310;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.textfornext a:hover {
+  background: #8a6748;
+}
 
-Vercel’s Frontend Cloud provides the developer experience and infrastructure to build, scale, and secure a faster, more personalized Web.
+.instructions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10rem;
+  text-align: center;
+  font-family: Bitter, sans-serif;
+}
 
-## Deploy
+/* ---------------------------------- */
+:root {
+  --brown: #754C28;
+  --brown-light: #8a6748;
+  --brown-dark: #432B16;
+  --brown-darker: #553310;
+}
 
-Get started by [importing a project](https://vercel.com/new), [choosing a template](https://vercel.com/templates), or using the [Vercel CLI](https://vercel.com/docs/cli). Then, `git push` to deploy.
+.chocolate-button {
+  /* Reset button styles */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 10vmin;
+  font-family: Bitter, cursive;
+  cursor: pointer;
+  transform: rotateX(10deg) rotateZ(10deg);
+}
+@media (min-width: 600px) {
+  .chocolate-button {
+    font-size: 60px;
+  }
+}
+.chocolate-button .bar {
+  border-radius: 0.3em;
+  display: block;
+  transition: transform 0.1s ease;
+}
+.chocolate-button .bar:hover, .chocolate-button .bar:focus, .chocolate-button .bar:active {
+  transform: translateY(0.05em);
+}
+.chocolate-button .bar:before, .chocolate-button .bar:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: inherit;
+}
+.chocolate-button .bar:before {
+  background-color: var(--brown);
+  border: 0.35em rgba(117, 76, 40, 0.6) ridge;
+  top: 0;
+  z-index: 0;
+}
+.chocolate-button .bar:after {
+  top: 0.3em;
+  left: 0.3em;
+  background: var(--brown-dark);
+  box-shadow: inset 0 -0.05em var(--brown-darker);
+}
+.chocolate-button .text, .chocolate-button .bar:before, .chocolate-button .bar:after {
+  transition: -webkit-clip-path 0.15s steps(3, start);
+  transition: clip-path 0.15s steps(3, start);
+  transition: clip-path 0.15s steps(3, start), -webkit-clip-path 0.15s steps(3, start);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, calc(30% + var(--x, 0) * 1px) 100%, calc(24% + var(--x, 0) * 1px) 100%, calc(7% + var(--x, 0) * 1px) 100%, calc(0% + var(--x, 0) * 1px) 100%, calc(-6% + var(--x, 0) * 1px) 100%, calc(-20% + var(--x, 0) * 1px) 100%, calc(-30% + var(--x, 0) * 1px) 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 100%, calc(30% + var(--x, 0) * 1px) 100%, calc(24% + var(--x, 0) * 1px) 100%, calc(7% + var(--x, 0) * 1px) 100%, calc(0% + var(--x, 0) * 1px) 100%, calc(-6% + var(--x, 0) * 1px) 100%, calc(-20% + var(--x, 0) * 1px) 100%, calc(-30% + var(--x, 0) * 1px) 100%, 0 100%, 0 0);
+}
+.chocolate-button .text {
+  display: block;
+  padding: 1em 0.5em;
+  color: var(--brown-dark);
+  opacity: 0.8;
+  text-shadow: 1px 2px var(--brown-light), -1px -2px black;
+}
 
-## Documentation
+/* ---------------------------------- */
+.crumbs {
+  position: absolute;
+  width: 0.3em;
+  height: 0.3em;
+  border-radius: 50%;
+  top: 0;
+  left: calc(var(--x,0) * 1px);
+  pointer-events: none;
+  opacity: 0;
+}
+.crumbs:before, .crumbs:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  box-shadow: -0.7469236207em 1.2466813059em var(--brown), -0.7469236207em 1.2466813059em var(--brown), -2.0202085753em 2.9480645459em var(--brown), -2.0202085753em 2.9480645459em var(--brown), 2.4328974053em 2.4983332261em var(--brown), 2.4328974053em 2.4983332261em var(--brown), -2.5822216475em 1.6743152386em var(--brown), -2.5822216475em 1.6743152386em var(--brown), -0.0778369657em 1.1914268657em var(--brown), -0.0778369657em 1.1914268657em var(--brown), 1.0855522268em 2.5192440078em var(--brown), 1.0855522268em 2.5192440078em var(--brown), 1.6360959077em 2.1229533444em var(--brown), 1.6360959077em 2.1229533444em var(--brown), -0.5531945583em 1.1120521473em var(--brown), -0.5531945583em 1.1120521473em var(--brown), 0.6857587999em 2.2473612557em var(--brown), 0.6857587999em 2.2473612557em var(--brown), -1.9868591353em 0.544609684em var(--brown), -1.9868591353em 0.544609684em var(--brown), -1.1675572309em 2.3533561717em var(--brown), -1.1675572309em 2.3533561717em var(--brown), 0.6249743959em 1.098726102em var(--brown), 0.6249743959em 1.098726102em var(--brown), 2.6847873672em 1.9232927758em var(--brown), 2.6847873672em 1.9232927758em var(--brown), 1.5414411695em 2.3332008964em var(--brown), 1.5414411695em 2.3332008964em var(--brown), -2.0487774557em 1.2274115435em var(--brown), -2.0487774557em 1.2274115435em var(--brown), -0.4448182089em 0.9870071691em var(--brown), -0.4448182089em 0.9870071691em var(--brown), -1.6576210394em 1.5560981305em var(--brown), -1.6576210394em 1.5560981305em var(--brown), 0.0171262184em 1.613514377em var(--brown), 0.0171262184em 1.613514377em var(--brown), -0.0043657671em 2.3489888032em var(--brown), -0.0043657671em 2.3489888032em var(--brown), -2.8298762657em 1.8260211373em var(--brown), -2.8298762657em 1.8260211373em var(--brown);
+}
+.crumbs:before {
+  height: 70%;
+  width: 70%;
+}
 
-For details on how to use Vercel, check out our [documentation](https://vercel.com/docs).
+/* ---------------------------------- */
+.chocolate-button:focus,
+.chocolate-button:active {
+  outline: none;
+  -webkit-animation: chomp 0.3s cubic-bezier(0.72, 0.12, 0.32, 0.96);
+          animation: chomp 0.3s cubic-bezier(0.72, 0.12, 0.32, 0.96);
+}
+@-webkit-keyframes chomp {
+  30% {
+    transform: translateZ(-6vmin) rotateX(15deg) rotateZ(12deg);
+  }
+  70% {
+    transform: translateZ(-10vmin) rotateX(0deg) rotateZ(8deg);
+  }
+}
+@keyframes chomp {
+  30% {
+    transform: translateZ(-6vmin) rotateX(15deg) rotateZ(12deg);
+  }
+  70% {
+    transform: translateZ(-10vmin) rotateX(0deg) rotateZ(8deg);
+  }
+}
+.chocolate-button:focus .text, .chocolate-button:focus .bar:before, .chocolate-button:focus .bar:after,
+.chocolate-button:active .text,
+.chocolate-button:active .bar:before,
+.chocolate-button:active .bar:after {
+  transition: none;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, calc(30% + var(--x, 0) * 1px) 100%, calc(24% + var(--x, 0) * 1px) 75%, calc(7% + var(--x, 0) * 1px) 58%, calc(0% + var(--x, 0) * 1px) 65%, calc(-6% + var(--x, 0) * 1px) 45%, calc(-20% + var(--x, 0) * 1px) 51%, calc(-30% + var(--x, 0) * 1px) 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 100%, calc(30% + var(--x, 0) * 1px) 100%, calc(24% + var(--x, 0) * 1px) 75%, calc(7% + var(--x, 0) * 1px) 58%, calc(0% + var(--x, 0) * 1px) 65%, calc(-6% + var(--x, 0) * 1px) 45%, calc(-20% + var(--x, 0) * 1px) 51%, calc(-30% + var(--x, 0) * 1px) 100%, 0 100%, 0 0);
+}
+.chocolate-button:focus .crumbs,
+.chocolate-button:active .crumbs {
+  opacity: 1;
+  -webkit-animation: crumbs 1.5s ease-out both;
+          animation: crumbs 1.5s ease-out both;
+}
+@-webkit-keyframes crumbs {
+  to {
+    transform: translateY(100vh);
+  }
+}
+@keyframes crumbs {
+  to {
+    transform: translateY(100vh);
+  }
+}
+.chocolate-button:focus .crumbs:before,
+.chocolate-button:active .crumbs:before {
+  -webkit-animation: inherit;
+          animation: inherit;
+  -webkit-animation-name: crumbs-left;
+          animation-name: crumbs-left;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+@-webkit-keyframes crumbs-left {
+  to {
+    transform: translateX(-15vw) rotate(-5deg);
+  }
+}
+@keyframes crumbs-left {
+  to {
+    transform: translateX(-15vw) rotate(-5deg);
+  }
+}
+.chocolate-button:focus .crumbs:after,
+.chocolate-button:active .crumbs:after {
+  -webkit-animation: inherit;
+          animation: inherit;
+  -webkit-animation-name: crumbs-right;
+          animation-name: crumbs-right;
+}
+@-webkit-keyframes crumbs-right {
+  to {
+    transform: translateX(15vw) rotate(5deg);
+  }
+}
+@keyframes crumbs-right {
+  to {
+    transform: translateX(15vw) rotate(5deg);
+  }
+}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Chocolate Day By SHOBHIT DEV</title>
+  <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
+<link rel="stylesheet" href="new.css">
 
-## Contributing
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<button class="chocolate-button">
+  <div class="crumbs"></div>
+  <span class="bar">
+    <span class="text">Shobhit Dev</span>
+  </span>
+</button>
 
-This project uses [pnpm](https://pnpm.io/) to install dependencies and run scripts.
+<div class="textfornext">
+  <h2>I have another surprise for you! 🎁</h2> <br />  <a href="new1.html">Click Here</a></h2>
+</div>
 
-You can use the `vercel` script to run local changes as if you were invoking Vercel CLI. For example, `vercel deploy --cwd=/path/to/project` could be run with local changes with `pnpm vercel deploy --cwd=/path/to/project`.
+  <script  src="./script.js"></script>
 
-When contributing to this repository, please first discuss the change you wish to make via [GitHub Discussions](https://github.com/vercel/vercel/discussions/new) with the owners of this repository before submitting a Pull Request.
+</body>
+</html>
+body {
+    background: #1e1f26;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  svg {
+    overflow: visible;
+  }
+  
+  #chocolate_box {
+    cursor: pointer;
+  }
+  
+  #top {
+    transition: transform 1s ease;
+  }
+  
+  #chocolate_box:hover #top {
+    transform: translate(40px, -25px) rotate(10deg);
+    transition: transform 1s ease;
+  }
+  
+  p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    background: #ffd1dc; /* Light pink background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px; /* Adds space between the chocolate box and text */
+    width: 80%;
+    max-width: 600px;
+  }
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-Please read our [Code of Conduct](./.github/CODE_OF_CONDUCT.md) and follow it in all your interactions with the project.
+body {
+  background: url('background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+}
 
-### Local development
+/* Gradient Overlay */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+}
 
-This project is configured in a monorepo, where one repository contains multiple npm packages. Dependencies are installed and managed with `pnpm`, not `npm` CLI.
+/* Text Styling */
+.text {
+  position: relative;
+  color: white;
+  padding: 20px;
+  z-index: 2;
+  max-width: 600px;
+}
 
-To get started, execute the following:
+.text h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
 
-```
-git clone https://github.com/vercel/vercel
-cd vercel
-corepack enable
-pnpm install
-pnpm build
-pnpm lint
-pnpm test-unit
-```
+.text p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
 
-Make sure all the tests pass before making changes.
+/* Button Styling */
+.btn {
+  text-decoration: none;
+  background: #ff416c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 5px 15px rgba(255, 65, 108, 0.4);
+}
 
-#### Running Vercel CLI Changes
-
-You can use `pnpm vercel` from the `cli` package to invoke Vercel CLI with local changes:
-
-```
-cd ./packages/cli
-pnpm vercel <cli-commands...>
-```
-
-See [CLI Local Development](../packages/cli#local-development) for more details.
-
-### Verifying your change
-
-Once you are done with your changes (we even suggest doing it along the way), make sure all the tests still pass by running:
-
-```
-pnpm test-unit
-```
-
-from the root of the project.
-
-If any test fails, make sure to fix it along with your changes. See [Interpreting test errors](#Interpreting-test-errors) for more information about how the tests are executed, especially the integration tests.
-
-### Pull Request Process
-
-Once you are confident that your changes work properly, open a pull request on the main repository.
-
-The pull request will be reviewed by the maintainers and the tests will be checked by our continuous integration platform.
-
-### Interpreting test errors
-
-There are 2 kinds of tests in this repository – Unit tests and Integration tests.
-
-Unit tests are run locally with `jest` and execute quickly because they are testing the smallest units of code.
-
-#### Integration tests
-
-Integration tests create deployments to your Vercel account using the `test` project name. After each test is deployed, the `probes` key is used to check if the response is the expected value. If the value doesn't match, you'll see a message explaining the difference. If the deployment failed to build, you'll see a more generic message like the following:
-
-```
-[Error: Fetched page https://test-8ashcdlew.vercel.app/root.js does not contain hello Root!. Instead it contains An error occurred with this application.
-
-    NO_STATUS_CODE_FRO Response headers:
-       cache-control=s-maxage=0
-      connection=close
-      content-type=text/plain; charset=utf-8
-      date=Wed, 19 Jun 2019 18:01:37 GMT
-      server=now
-      strict-transport-security=max-age=63072000
-      transfer-encoding=chunked
-      x-now-id=iad1:hgtzj-1560967297876-44ae12559f95
-      x-now-trace=iad1]
-```
-
-In such cases, you can visit the URL of the failed deployment and append `/_logs` to see the build error. In the case above, that would be https://test-8ashcdlew.vercel.app/_logs
-
-The logs of this deployment will contain the actual error which may help you to understand what went wrong.
-
-##### Running integration tests locally
-
-While running the full integration suite locally is not recommended, it's sometimes useful to isolate a failing test by running it on your machine. To do so, you'll need to ensure you have the appropriate credentials sourced in your shell:
-
-1. Create an access token. Follow the insructions here https://vercel.com/docs/rest-api#creating-an-access-token. Ensure the token scope is for your personal
-   account.
-2. Grab the team ID from the Vercel dashboard at `https://vercel.com/<MY-TEAM>/~/settings`.
-3. Source these into your shell rc file: `echo 'export VERCEL_TOKEN=<MY-TOKEN> VERCEL_TEAM_ID=<MY-TEAM-ID>' >> ~/.zshrc`
-
-From there, you should be able to trigger an integration test. Choose one
-that's already isolated to check that things work:
-
-```
-cd packages/next
-```
-
-Run the test:
-
-```
-pnpm test test/fixtures/00-server-build/index.test.js
-```
-
-> **NOTE:** If you receive a `401` status code while fetching the deployment, you need to disable [Deployment Protection](https://vercel.com/docs/security/deployment-protection) on the project.
-
-#### @vercel/nft
-
-Some of the Builders use `@vercel/nft` to tree-shake files before deployment. If you suspect an error with this tree-shaking mechanism, you can create the following script in your project:
-
-```js
-const { nodeFileTrace } = require('@vercel/nft');
-nodeFileTrace(['path/to/entrypoint.js'], {
-  ts: true,
-  mixedModules: true,
-})
-  .then(o => console.log(o.fileList))
-  .then(e => console.error(e));
-```
-
-When you run this script, you'll see all the imported files. If files are missing, the bug is in [@vercel/nft](https://github.com/vercel/nft) and not the Builder.
-
-### Deploy a Builder with existing project
-
-Sometimes you want to test changes to a Builder against an existing project, maybe with `vercel dev` or actual deployment. You can avoid publishing every Builder change to npm by uploading the Builder as a tarball.
-
-1. Change directory to the desired Builder `cd ./packages/node`
-2. Run `pnpm build` to compile typescript and other build steps
-3. Run `npm pack` to create a tarball file
-4. Run `vercel *.tgz` to upload the tarball file and get a URL
-5. Edit any existing `vercel.json` project and replace `use` with the URL
-6. Run `vercel` or `vercel dev` to deploy with the experimental Builder
-
-## Reference
-
-- [Code of Conduct](./.github/CODE_OF_CONDUCT.md)
-- [Contributing Guidelines](./.github/CONTRIBUTING.md)
-- [Apache 2.0 License](./LICENSE)
+.btn:hover {
+  background: #ff4b2b;
+  transform: scale(1.1);
+}
